@@ -80,7 +80,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Shakti Tamrakar Logo"
-            className="h-7 w-[200px] md:w-auto"
+            className="h-6 md:h-7 w-[190px] md:w-auto"
           />
         </button>
 
