@@ -1,5 +1,13 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  Instagram,
+  Facebook,
+} from "lucide-react";
 import { Link } from "react-scroll";
 
 export default function Hero() {
@@ -57,13 +65,30 @@ export default function Hero() {
             className="flex justify-center space-x-6"
           >
             <a
-              href="https://github.com/shakti177"
+              href="https://www.facebook.com/shaktitamrakar17"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-black transition"
             >
-              <Github className="h-6 w-6" />
+              <Facebook className="h-6 w-6" />
             </a>
+            <a
+              href="https://www.instagram.com/shakti_tamrakar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-black transition"
+            >
+              <Instagram className="h-6 w-6" />
+            </a>
+            <a
+              href="https://x.com/TamrakarShakti"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-black transition"
+            >
+              <Twitter className="h-6 w-6" />
+            </a>
+
             <a
               href="https://linkedin.com/in/shaktitamrakar"
               target="_blank"
@@ -71,6 +96,14 @@ export default function Hero() {
               className="text-gray-600 hover:text-black transition"
             >
               <Linkedin className="h-6 w-6" />
+            </a>
+            <a
+              href="https://github.com/shakti177"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-black transition"
+            >
+              <Github className="h-6 w-6" />
             </a>
             <a
               href="mailto:shaktitamrakar14@gmail.com"
