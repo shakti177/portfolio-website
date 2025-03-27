@@ -95,9 +95,14 @@ export default function Navbar() {
               {item.name}
             </button>
           ))}
-          <button className="ml-4 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors">
+          <a
+            href="https://drive.google.com/file/d/1Om3JTOALyAqV7SYkvm1HVDme-jw6fC_m/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
+          >
             Resume
-          </button>
+          </a>
         </nav>
 
         {/* Mobile Navigation*/}
@@ -140,7 +145,12 @@ export default function Navbar() {
                 variants={navItemVariants}
                 className="mt-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
               >
-                Resume
+                <a
+                  href="https://drive.google.com/file/d/1Om3JTOALyAqV7SYkvm1HVDme-jw6fC_m/view"
+                  target="_blank"
+                >
+                  Resume
+                </a>
               </motion.button>
             </motion.div>
           </motion.div>
