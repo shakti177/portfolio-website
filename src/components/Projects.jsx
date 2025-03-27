@@ -6,6 +6,15 @@ import postopia from "../assets/postopia.png";
 
 const projectsData = [
   {
+    title: "Postopia Blogging Website",
+    description:
+      "Postopia is a blogging website built with ReactJS, ExpressJS, and MongoDB. It allows users to create, read, update, and delete blog posts. The website features a user-friendly interface, enabling easy navigation and interaction. Users can register, log in, and manage their profiles while enjoying a seamless blogging experience.",
+    image: postopia,
+    tags: ["ReactJS", "ExpressJS", "MongoDB", "Tailwind CSS"],
+    github: null,
+    live: "https://postopia.vercel.app/",
+  },
+  {
     title: "UOMO Ecommerce Website",
     description:
       "Discover Uomo Ecommerce, where sleek design meets seamless functionality. Powered by ReactJS, React Router DOM, Material UI, Redux Toolkit, and SwiperJS, our site ensures a smooth, responsive experience across all devices. Shop confidently with features like easy cart management, detailed product views, and instant order confirmations.",
@@ -22,15 +31,6 @@ const projectsData = [
     tags: ["React Native", "API Integration", "Mobile App"],
     github: "https://github.com/shakti177",
     live: "https://flashfeed-news-website.netlify.app/",
-  },
-  {
-    title: "Postopia Blogging Website",
-    description:
-      "Postopia is a blogging website built with ReactJS, ExpressJS, and MongoDB. It allows users to create, read, update, and delete blog posts. The website features a user-friendly interface, enabling easy navigation and interaction. Users can register, log in, and manage their profiles while enjoying a seamless blogging experience.",
-    image: postopia,
-    tags: ["ReactJS", "ExpressJS", "MongoDB"],
-    github: null,
-    live: "https://postopia.vercel.app/",
   },
 ];
 
