@@ -18,7 +18,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Hi, I'm <span className="text-blue-600">Shakti Tamrakar</span>
+              Hi, I'm <span className="text-blue-800">Shakti Tamrakar</span>
             </h1>
           </motion.div>
 
@@ -39,12 +39,12 @@ export default function Hero() {
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
             <Link to="contact" smooth={true} duration={500}>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-md flex items-center gap-2 hover:bg-blue-700 transition">
+              <button className="bg-blue-800 text-white px-6 py-2 rounded-md flex items-center gap-2 hover:bg-blue-700 transition">
                 Contact Me <ArrowRight className="h-4 w-4" />
               </button>
             </Link>
             <Link to="projects" smooth={true} duration={500}>
-              <button className="border border-blue-600 text-blue-600 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition">
+              <button className="border border-blue-600 text-blue-800 px-6 py-2 rounded-md hover:bg-blue-600 hover:text-white transition">
                 View Projects
               </button>
             </Link>

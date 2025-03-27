@@ -99,7 +99,7 @@ export default function Navbar() {
             href="https://drive.google.com/file/d/1Om3JTOALyAqV7SYkvm1HVDme-jw6fC_m/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
+            className="ml-4 px-4 py-2 text-sm font-medium text-white bg-blue-800 rounded-md hover:bg-blue-700 transition-colors"
           >
             Resume
           </a>

@@ -26,7 +26,7 @@ export default function Experience() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold mb-2">Experience</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             My professional journey in the tech industry
           </p>
@@ -46,7 +46,7 @@ export default function Experience() {
                 <div className="p-6 pb-2">
                   <div className="flex flex-wrap gap-2 items-center justify-between">
                     <h3 className="text-xl font-bold flex items-center">
-                      <Briefcase className="h-5 w-5 mr-2 text-blue-600" />
+                      <Briefcase className="h-5 w-5 mr-2 text-blue-800" />
                       {item.position}
                     </h3>
                     <div className="flex items-center text-sm text-gray-500">
@@ -64,7 +64,7 @@ export default function Experience() {
                     <ul className="space-y-2">
                       {item.responsibilities.map((responsibility, idx) => (
                         <li key={idx} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 mr-2 text-blue-600 shrink-0 mt-0.5" />
+                          <CheckCircle className="h-5 w-5 mr-2 text-blue-800 shrink-0 mt-0.5" />
                           <span>{responsibility}</span>
                         </li>
                       ))}

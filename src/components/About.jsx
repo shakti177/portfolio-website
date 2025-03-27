@@ -14,7 +14,7 @@ export default function About() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold mb-2">About Me</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Computer Science Engineer with a passion for web development and
             problem-solving.
@@ -54,17 +54,17 @@ export default function About() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div className="bg-white rounded-lg shadow-sm p-4 flex items-center">
-                <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                <MapPin className="h-5 w-5 text-blue-800 mr-3" />
                 <span>Khurai, Madhya Pradesh, India</span>
               </div>
 
               <div className="bg-white rounded-lg shadow-sm p-4 flex items-center">
-                <Phone className="h-5 w-5 text-blue-600 mr-3" />
+                <Phone className="h-5 w-5 text-blue-800 mr-3" />
                 <a href="tel:+919644605710">+91-9644605710</a>
               </div>
 
               <div className="bg-white rounded-lg shadow-sm p-4 flex items-center md:col-span-2">
-                <Mail className="h-5 w-5 text-blue-600 mr-3" />
+                <Mail className="h-5 w-5 text-blue-800 mr-3" />
                 <a href="mailto:shaktitamrakar14@gmail.com">
                   shaktitamrakar14@gmail.com
                 </a>

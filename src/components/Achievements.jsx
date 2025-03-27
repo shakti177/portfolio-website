@@ -3,25 +3,25 @@ import { Award, Code, Globe, Trophy } from "lucide-react";
 
 const achievementsData = [
   {
-    icon: <Award className="h-8 w-8 text-blue-600" />,
+    icon: <Award className="h-8 w-8 text-blue-800" />,
     title: "5 Star in Java on HackerRank",
     description:
       "Achieved 5-star rating in Java programming on HackerRank platform.",
   },
   {
-    icon: <Code className="h-8 w-8 text-blue-600" />,
+    icon: <Code className="h-8 w-8 text-blue-800" />,
     title: "200+ Problems Solved",
     description:
       "Solved over 200 problems on LeetCode, HackerRank and other coding platforms.",
   },
   {
-    icon: <Globe className="h-8 w-8 text-blue-600" />,
+    icon: <Globe className="h-8 w-8 text-blue-800" />,
     title: "10+ Personal Blogging Websites",
     description:
       "Created 10+ personal blogging websites with over 1 million visitors.",
   },
   {
-    icon: <Trophy className="h-8 w-8 text-blue-600" />,
+    icon: <Trophy className="h-8 w-8 text-blue-800" />,
     title: "PowerPoint Presentation Competition",
     description:
       "Participated in Inter School PowerPoint Presentation Competition and secured 3rd position.",
@@ -40,7 +40,7 @@ export default function Achievements() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold mb-2">Achievements</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Recognitions and accomplishments throughout my journey
           </p>

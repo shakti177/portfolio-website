@@ -30,7 +30,7 @@ export default function Education() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold mb-2">Education</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             My academic journey in Computer Science
           </p>
@@ -50,7 +50,7 @@ export default function Education() {
                 <div className="p-6 pb-2">
                   <div className="flex flex-wrap gap-2 items-center justify-between">
                     <h3 className="text-xl font-bold flex items-center">
-                      <GraduationCap className="h-5 w-5 mr-2 text-blue-600" />
+                      <GraduationCap className="h-5 w-5 mr-2 text-blue-800" />
                       {item.degree}
                     </h3>
                     <div className="flex items-center text-sm text-gray-500">
@@ -63,7 +63,7 @@ export default function Education() {
                   <div className="space-y-2">
                     <p className="font-medium">{item.institution}</p>
                     <p className="text-sm text-gray-500">{item.location}</p>
-                    <p className="text-sm font-medium text-blue-600">
+                    <p className="text-sm font-medium text-blue-800">
                       {item.grade}
                     </p>
                   </div>

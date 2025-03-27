@@ -33,7 +33,7 @@ export default function Contact() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold mb-2">Contact Me</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Get in touch with me for opportunities or collaborations
           </p>
@@ -54,7 +54,7 @@ export default function Contact() {
 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <Mail className="h-5 w-5 text-blue-600 mr-3 mt-0.5" />
+                    <Mail className="h-5 w-5 text-blue-800 mr-3 mt-0.5" />
                     <div>
                       <p className="font-medium">Email</p>
                       <a
@@ -80,7 +80,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5" />
+                    <MapPin className="h-5 w-5 text-blue-800 mr-3 mt-0.5" />
                     <div>
                       <p className="font-medium">Location</p>
                       <p className="text-gray-600">
@@ -207,7 +207,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="mt-4 w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center"
+                    className="mt-4 w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center"
                   >
                     <Send className="h-4 w-4 mr-2" /> Send Message
                   </button>

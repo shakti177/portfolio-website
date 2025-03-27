@@ -4,17 +4,17 @@ import { Code, Layout, BookOpen, Lightbulb } from "lucide-react";
 const skillsData = [
   {
     category: "Languages",
-    icon: <Code className="h-6 w-6 text-blue-600" />,
+    icon: <Code className="h-6 w-6 text-blue-800" />,
     skills: ["Java", "Python", "C++", "HTML", "CSS", "JavaScript"],
   },
   {
     category: "Frameworks",
-    icon: <Layout className="h-6 w-6 text-blue-600" />,
+    icon: <Layout className="h-6 w-6 text-blue-800" />,
     skills: ["ReactJS", "React Native"],
   },
   {
     category: "Coursework",
-    icon: <BookOpen className="h-6 w-6 text-blue-600" />,
+    icon: <BookOpen className="h-6 w-6 text-blue-800" />,
     skills: [
       "Data Structures",
       "Algorithms",
@@ -24,7 +24,7 @@ const skillsData = [
   },
   {
     category: "Miscellaneous Skills",
-    icon: <Lightbulb className="h-6 w-6 text-blue-600" />,
+    icon: <Lightbulb className="h-6 w-6 text-blue-800" />,
     skills: [
       "Problem-Solving",
       "Communication",
@@ -76,7 +76,7 @@ export default function Skills() {
                     {category.skills.map((skill, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-blue-600/10 text-blue-600 rounded-full text-sm"
+                        className="px-3 py-1 bg-blue-600/10 text-blue-800 rounded-full text-sm"
                       >
                         {skill}
                       </span>

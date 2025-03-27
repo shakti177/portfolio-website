@@ -46,7 +46,7 @@ export default function Projects() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold mb-2">Projects</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Showcasing my technical skills through real-world applications
           </p>
@@ -75,7 +75,7 @@ export default function Projects() {
                     {project.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-blue-600/10 text-blue-600 rounded-full text-xs"
+                        className="px-2 py-1 bg-blue-600/10 text-blue-800 rounded-full text-xs"
                       >
                         {tag}
                       </span>
@@ -101,7 +101,7 @@ export default function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 text-sm bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                      className="inline-flex items-center px-4 py-2 text-sm bg-blue-800 text-white rounded-md hover:bg-blue-700 transition-colors"
                     >
                       <ExternalLink className="h-4 w-4 mr-2" /> Live Demo
                     </a>
