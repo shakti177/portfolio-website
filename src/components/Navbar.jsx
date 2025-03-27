@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/logo.png";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -74,12 +75,16 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <button
           onClick={() => handleNavClick("#home")}
-          className="text-xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
+          className="flex items-center focus:outline-none"
         >
-          Shakti Tamrakar
+          <img
+            src={logo}
+            alt="Shakti Tamrakar Logo"
+            className="h-7 w-[200px] md:w-auto"
+          />
         </button>
 
-        {/* Desktop Navigation - shown only on lg screens and up */}
+        {/* Desktop Navigation*/}
         <nav className="hidden lg:flex items-center space-x-1">
           {navItems.map((item) => (
             <button
@@ -95,7 +100,7 @@ export default function Navbar() {
           </button>
         </nav>
 
-        {/* Mobile Navigation Toggle - shown on all screens below lg */}
+        {/* Mobile Navigation*/}
         <button
           className="lg:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -105,7 +110,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Navigation Menu - shown on all screens below lg */}
+      {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
