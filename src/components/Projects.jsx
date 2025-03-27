@@ -1,24 +1,26 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
+import uomo from "../assets/uomo.png";
+import flashfeed from "../assets/flashfeed.png";
 
 const projectsData = [
   {
     title: "UOMO Ecommerce Website",
     description:
       "Discover Uomo Ecommerce, where sleek design meets seamless functionality. Powered by ReactJS, React Router DOM, Material UI, Redux Toolkit, and SwiperJS, our site ensures a smooth, responsive experience across all devices. Shop confidently with features like easy cart management, detailed product views, and instant order confirmations.",
-    image: "/placeholder.svg?height=300&width=500",
+    image: uomo,
     tags: ["ReactJS", "Redux Toolkit", "Material UI", "SwiperJS"],
     github: "https://github.com/shakti177",
-    live: "#",
+    live: "https://uomo-ecommerce-website.netlify.app/",
   },
   {
     title: "News App Using React Native",
     description:
       "React Native-based mobile application designed for seamless news aggregation. Connected the app to the NewsData service so that it pulls in fresh news whenever someone opens it. Included integrating the API, designing an intuitive user interface, implementing dynamic content rendering via FlatList and a Slider component for top news, and enabling infinite scrolling for a fluid browsing experience.",
-    image: "/placeholder.svg?height=300&width=500",
+    image: flashfeed,
     tags: ["React Native", "API Integration", "Mobile App"],
     github: "https://github.com/shakti177",
-    live: null,
+    live: "https://flashfeed-news-website.netlify.app/",
   },
   {
     title: "Pet Detection Using YOLOV5",

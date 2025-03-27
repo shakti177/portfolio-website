@@ -41,17 +41,17 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Contact Information Card */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex-1"
+            className="h-full"
           >
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-full flex flex-col">
-              <div className="p-6 flex-grow">
+              <div className="p-6">
                 <h3 className="text-xl font-bold mb-6">Contact Information</h3>
 
                 <div className="space-y-4">
@@ -145,72 +145,71 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Contact Form Card */}
+          {/* Contact Form Card - Fixed to prevent button overflow */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
-            className="flex-1"
+            className="h-full"
           >
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-full flex flex-col">
-              <div className="p-6 flex-grow">
+              <div className="p-6 flex flex-col h-full">
                 <h3 className="text-xl font-bold mb-6">Send Me a Message</h3>
 
-                <form
-                  onSubmit={handleSubmit}
-                  className="space-y-4 h-full flex flex-col"
-                >
-                  <div>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your Name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    />
-                  </div>
+                <form onSubmit={handleSubmit} className="flex flex-col h-full">
+                  <div className="space-y-4 flex-grow">
+                    <div>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      />
+                    </div>
 
-                  <div>
-                    <input
-                      type="email"
-                      name="email"
-                      placeholder="Your Email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    />
-                  </div>
+                    <div>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      />
+                    </div>
 
-                  <div>
-                    <input
-                      type="text"
-                      name="subject"
-                      placeholder="Subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    />
-                  </div>
+                    <div>
+                      <input
+                        type="text"
+                        name="subject"
+                        placeholder="Subject"
+                        value={formData.subject}
+                        onChange={handleChange}
+                        required
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      />
+                    </div>
 
-                  <div className="flex-grow">
-                    <textarea
-                      name="message"
-                      placeholder="Your Message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      className="w-full h-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                    />
+                    <div className="flex-grow">
+                      <textarea
+                        name="message"
+                        placeholder="Your Message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
+                        className="w-full h-full min-h-[120px] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      />
+                    </div>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center"
+                    className="mt-4 w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center"
                   >
                     <Send className="h-4 w-4 mr-2" /> Send Message
                   </button>
