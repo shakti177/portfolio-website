@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail } from "lucide-react";
+import photo from "../assets/photo.jpeg";
 
 export default function About() {
   return (
@@ -29,9 +30,9 @@ export default function About() {
           >
             <div className="aspect-square rounded-full bg-blue-600/10 flex items-center justify-center overflow-hidden">
               <img
-                src="/placeholder.svg?height=400&width=400"
+                src={photo}
                 alt="Shakti Tamrakar"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-bottom"
               />
             </div>
           </motion.div>
@@ -59,12 +60,14 @@ export default function About() {
 
               <div className="bg-white rounded-lg shadow-sm p-4 flex items-center">
                 <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                <span>+91-9644605710</span>
+                <a href="tel:+919644605710">+91-9644605710</a>
               </div>
 
               <div className="bg-white rounded-lg shadow-sm p-4 flex items-center md:col-span-2">
                 <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                <span>shaktitamrakar14@gmail.com</span>
+                <a href="mailto:shaktitamrakar14@gmail.com">
+                  shaktitamrakar14@gmail.com
+                </a>
               </div>
             </div>
           </motion.div>

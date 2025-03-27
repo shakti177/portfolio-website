@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import uomo from "../assets/uomo.png";
 import flashfeed from "../assets/flashfeed.png";
+import postopia from "../assets/postopia.png";
 
 const projectsData = [
   {
@@ -26,7 +27,7 @@ const projectsData = [
     title: "Pet Detection Using YOLOV5",
     description:
       "Developed a pet detection system using YOLOv5, an advanced computer vision algorithm. Utilized deep learning techniques to accurately detect and classify pets in images or videos. Designed to assist in various applications such as pet monitoring, safety, and tracking, providing reliable and efficient pet detection capabilities.",
-    image: "/placeholder.svg?height=300&width=500",
+    image: postopia,
     tags: ["Python", "YOLOv5", "Computer Vision", "Deep Learning"],
     github: null,
     live: null,
