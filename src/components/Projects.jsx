@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Star } from "lucide-react";
 import uomo from "../assets/uomo.png";
 import flashfeed from "../assets/flashfeed.png";
 import postopia from "../assets/postopia.png";
+import { useEffect, useState } from "react";
 
 const projectsData = [
   {
@@ -12,6 +13,7 @@ const projectsData = [
     image: postopia,
     tags: ["ReactJS", "ExpressJS", "MongoDB", "Tailwind CSS"],
     github: null,
+    githubRepo: null,
     live: "https://postopia.vercel.app/",
   },
   {
@@ -20,7 +22,8 @@ const projectsData = [
       "Discover Uomo Ecommerce, where sleek design meets seamless functionality. Powered by ReactJS, React Router DOM, Material UI, Redux Toolkit, and SwiperJS, our site ensures a smooth, responsive experience across all devices. Shop confidently with features like easy cart management, detailed product views, and instant order confirmations.",
     image: uomo,
     tags: ["ReactJS", "Redux Toolkit", "Material UI", "SwiperJS"],
-    github: "https://github.com/shakti177",
+    github: "https://github.com/shakti177/uomo-ecommerce-website-reactjs",
+    githubRepo: "shakti177/uomo-ecommerce-website-reactjs",
     live: "https://uomo-ecommerce-website.netlify.app/",
   },
   {
@@ -29,12 +32,42 @@ const projectsData = [
       "React Native-based mobile application designed for seamless news aggregation. Connected the app to the NewsData service so that it pulls in fresh news whenever someone opens it. Included integrating the API, designing an intuitive user interface, implementing dynamic content rendering via FlatList and a Slider component for top news, and enabling infinite scrolling for a fluid browsing experience.",
     image: flashfeed,
     tags: ["React Native", "API Integration", "Mobile App"],
-    github: "https://github.com/shakti177",
+    github: "https://github.com/shakti177/FlashFeed-News-App-React_Native",
+    githubRepo: "shakti177/FlashFeed-News-App-React_Native",
     live: "https://flashfeed-news-website.netlify.app/",
   },
 ];
 
+async function fetchGitHubStars(repo) {
+  try {
+    const response = await fetch(`https://api.github.com/repos/${repo}`);
+    if (!response.ok) return null;
+    const data = await response.json();
+    return data.stargazers_count;
+  } catch (error) {
+    console.error("Error fetching GitHub stars:", error);
+    return null;
+  }
+}
+
 export default function Projects() {
+  const [stars, setStars] = useState({});
+
+  useEffect(() => {
+    const fetchStars = async () => {
+      const starsData = {};
+      for (const project of projectsData) {
+        if (project.githubRepo) {
+          const starCount = await fetchGitHubStars(project.githubRepo);
+          starsData[project.githubRepo] = starCount;
+        }
+      }
+      setStars(starsData);
+    };
+
+    fetchStars();
+  }, []);
+
   return (
     <section id="projects" className="py-20 bg-gray-100/30">
       <div className="container mx-auto px-4">
@@ -94,6 +127,13 @@ export default function Projects() {
                       className="inline-flex items-center px-4 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
                     >
                       <Github className="h-4 w-4 mr-2" /> GitHub
+                      {project.githubRepo &&
+                        stars[project.githubRepo] !== undefined && (
+                          <span className="ml-2 flex items-center text-gray-600">
+                            <Star className="h-3 w-3 mr-1 fill-blue-800 text-blue-800" />
+                            {stars[project.githubRepo]}
+                          </span>
+                        )}
                     </a>
                   )}
                   {project.live && (
