@@ -48,7 +48,7 @@ export default function Education() {
             >
               <div className="bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
                 <div className="p-6 pb-2">
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-wrap gap-2 items-center justify-between">
                     <h3 className="text-xl font-bold flex items-center">
                       <GraduationCap className="h-5 w-5 mr-2 text-blue-600" />
                       {item.degree}
