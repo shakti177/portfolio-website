@@ -24,13 +24,13 @@ const projectsData = [
     live: "https://flashfeed-news-website.netlify.app/",
   },
   {
-    title: "Pet Detection Using YOLOV5",
+    title: "Postopia Blogging Website",
     description:
-      "Developed a pet detection system using YOLOv5, an advanced computer vision algorithm. Utilized deep learning techniques to accurately detect and classify pets in images or videos. Designed to assist in various applications such as pet monitoring, safety, and tracking, providing reliable and efficient pet detection capabilities.",
+      "Postopia is a blogging website built with ReactJS, ExpressJS, and MongoDB. It allows users to create, read, update, and delete blog posts. The website features a user-friendly interface, enabling easy navigation and interaction. Users can register, log in, and manage their profiles while enjoying a seamless blogging experience.",
     image: postopia,
-    tags: ["Python", "YOLOv5", "Computer Vision", "Deep Learning"],
+    tags: ["ReactJS", "ExpressJS", "MongoDB"],
     github: null,
-    live: null,
+    live: "https://postopia.vercel.app/",
   },
 ];
 
