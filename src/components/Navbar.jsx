@@ -90,7 +90,7 @@ export default function Navbar() {
             <button
               key={item.name}
               onClick={() => handleNavClick(item.href)}
-              className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+              className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors hover:cursor-pointer"
             >
               {item.name}
             </button>
