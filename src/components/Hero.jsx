@@ -117,7 +117,7 @@ export default function Hero() {
 
       <div className="absolute bottom-20 md:left-1/2 transform -translate-x-1/2 animate-bounce">
         <ArrowRight
-          className="h-6 w-6 rotate-90 text-gray-600"
+          className="h-6 w-6 rotate-90 text-gray-600 hover:cursor-pointer"
           onClick={() => {
             document
               .getElementById("about")
