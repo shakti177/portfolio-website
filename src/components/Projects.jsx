@@ -12,8 +12,8 @@ const projectsData = [
       "Postopia is a blogging website built with ReactJS, ExpressJS, and MongoDB. It allows users to create, read, update, and delete blog posts. The website features a user-friendly interface, enabling easy navigation and interaction. Users can register, log in, and manage their profiles while enjoying a seamless blogging experience.",
     image: postopia,
     tags: ["ReactJS", "ExpressJS", "MongoDB", "Tailwind CSS"],
-    github: null,
-    githubRepo: null,
+    github: "https://github.com/shakti177/postopia",
+    githubRepo: "shakti177/postopia",
     live: "https://postopia.vercel.app/",
   },
   {
