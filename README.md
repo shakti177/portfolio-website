@@ -26,6 +26,7 @@ portfolio-website/
 │   │-- index.js      # Entry point
 │-- package.json      # Dependencies and scripts
 │-- README.md         # Project documentation
+|-- .env              # env file for private key
 ```
 
 ## 🚀 Installation & Setup
@@ -42,6 +43,9 @@ portfolio-website/
    npm install
    ```
 4. Create a .env file in the root directory and add the following environment variables:
+
+   Get Your Keys from - https://www.emailjs.com
+
    ```sh
    VITE_EMAILJS_SERVICE_ID=YOUR_SERVICE_ID
    VITE_EMAILJS_TEMPLATE_ID=YOUR_TEMPLATE_ID
