@@ -11,6 +11,7 @@ Check out the live version of my portfolio: [Portfolio Website](https://shakti-t
 - Contact form integration
 - Smooth scrolling and animations
 - GitHub star data integration
+- EmailJS integration for the Contact Form
 
 ## 🛠️ Technologies Used
 - **Frontend:** ReactJS, Tailwind CSS
