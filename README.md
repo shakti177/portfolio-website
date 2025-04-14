@@ -41,6 +41,12 @@ portfolio-website/
    ```sh
    npm install
    ```
+4. Create a .env file in the root directory and add the following environment variables:
+   ```sh
+   VITE_EMAILJS_SERVICE_ID=YOUR_SERVICE_ID
+   VITE_EMAILJS_TEMPLATE_ID=YOUR_TEMPLATE_ID
+   VITE_EMAILJS_PUBLIC_KEY=YOUR_PUBLIC_ID
+   ```
 4. Start the development server:
    ```sh
    npm start
