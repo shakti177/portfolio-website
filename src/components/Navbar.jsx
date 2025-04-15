@@ -17,15 +17,40 @@ const navItems = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
+
+      const offsets = navItems.map((item) => {
+        const el = document.querySelector(item.href);
+        if (el) {
+          return {
+            name: item.name,
+            offset: el.offsetTop - 120,
+          };
+        }
+        return null;
+      });
+
+      const scrollY = window.scrollY;
+      const current = offsets
+        .filter(Boolean)
+        .reverse()
+        .find((item) => scrollY >= item.offset);
+
+      if (
+        current &&
+        current.name.toLowerCase() !== activeSection.toLowerCase()
+      ) {
+        setActiveSection(current.name.toLowerCase());
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [activeSection]);
 
   const handleNavClick = (href) => {
     const element = document.querySelector(href);
@@ -84,13 +109,17 @@ export default function Navbar() {
           />
         </button>
 
-        {/* Desktop Navigation*/}
+        {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-1">
           {navItems.map((item) => (
             <button
               key={item.name}
               onClick={() => handleNavClick(item.href)}
-              className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors hover:cursor-pointer"
+              className={`px-3 py-2 text-sm font-medium transition-colors hover:text-gray-900 ${
+                activeSection === item.name.toLowerCase()
+                  ? "text-blue-800 border-b-2 border-blue-800"
+                  : "text-gray-600"
+              }`}
             >
               {item.name}
             </button>
@@ -105,7 +134,7 @@ export default function Navbar() {
           </a>
         </nav>
 
-        {/* Mobile Navigation*/}
+        {/* Mobile Navigation Button */}
         <button
           className="lg:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -135,7 +164,11 @@ export default function Navbar() {
                   animate="visible"
                   exit="hidden"
                   onClick={() => handleNavClick(item.href)}
-                  className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors text-left"
+                  className={`px-3 py-2 text-sm font-medium text-left transition-colors ${
+                    activeSection === item.name.toLowerCase()
+                      ? "text-blue-800 border-b border-blue-800"
+                      : "text-gray-600"
+                  }`}
                 >
                   {item.name}
                 </motion.button>
@@ -148,6 +181,7 @@ export default function Navbar() {
                 <a
                   href="https://drive.google.com/file/d/1vKQutDUvRWzmR3FhCUbGg7pvLQK0nxe3/view?usp=sharing"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Resume
                 </a>
