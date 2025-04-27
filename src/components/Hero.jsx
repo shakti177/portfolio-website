@@ -12,7 +12,7 @@ import {
 import { Link } from "react-scroll";
 
 export default function Hero() {
-  const texts = ["Shakti Tamrakar", "MERN Stack Developer"];
+  const texts = ["Shakti Tamrakar", "MERN Developer"];
 
   const [text, setText] = useState("");
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -54,7 +54,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 flex justify-center">
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 flex flex-wrap justify-center">
               Hi, I'm{" "}
               <span className="text-blue-800 ml-2 relative">
                 {text}
