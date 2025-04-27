@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -11,6 +12,34 @@ import {
 import { Link } from "react-scroll";
 
 export default function Hero() {
+  const texts = ["Shakti Tamrakar", "MERN Stack Developer"];
+
+  const [text, setText] = useState("");
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = texts[currentTextIndex];
+    let typeSpeed = isDeleting ? 50 : 100;
+
+    const timer = setTimeout(() => {
+      if (isDeleting) {
+        setText(current.substring(0, text.length - 1));
+      } else {
+        setText(current.substring(0, text.length + 1));
+      }
+
+      if (!isDeleting && text === current) {
+        setTimeout(() => setIsDeleting(true), 1000);
+      } else if (isDeleting && text === "") {
+        setIsDeleting(false);
+        setCurrentTextIndex((prev) => (prev + 1) % texts.length);
+      }
+    }, typeSpeed);
+
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, currentTextIndex]);
+
   return (
     <section
       id="home"
@@ -25,8 +54,14 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              Hi, I'm <span className="text-blue-800">Shakti Tamrakar</span>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 flex justify-center">
+              Hi, I'm{" "}
+              <span className="text-blue-800 ml-2 relative">
+                {text}
+                <span className="absolute left-full top-0 animate-blink">
+                  |
+                </span>
+              </span>
             </h1>
           </motion.div>
 
@@ -36,7 +71,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h2 className="text-xl md:text-2xl text-gray-600 mb-8">
-              Computer Science Engineer & Web Developer
+              Computer Science Engineer & Software Developer
             </h2>
           </motion.div>
 
