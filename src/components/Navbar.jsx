@@ -125,7 +125,7 @@ export default function Navbar() {
             </button>
           ))}
           <a
-            href="https://drive.google.com/file/d/1vKQutDUvRWzmR3FhCUbGg7pvLQK0nxe3/view?usp=sharing"
+            href="https://drive.google.com/file/d/1-Izf26pej3TXvHeSjeUpww3EMrVlRW3p/view"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-4 px-4 py-2 text-sm font-medium text-white bg-blue-800 rounded-md hover:bg-blue-700 transition-colors"
