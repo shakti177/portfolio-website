@@ -128,7 +128,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 text-sm border text-black dark:text-white border-gray-300 dark:border-neutral-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                      className="inline-flex items-center px-4 py-2 text-sm border text-black dark:text-white border-gray-300 dark:border-neutral-700 rounded-md dark:bg-neutral-950 hover:bg-gray-50 dark:hover:bg-neutral-800 transition-colors"
                     >
                       <Github className="h-4 w-4 mr-2" /> GitHub
                       {project.githubRepo &&
