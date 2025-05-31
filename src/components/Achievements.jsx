@@ -3,25 +3,25 @@ import { Award, Code, Globe, Trophy } from "lucide-react";
 
 const achievementsData = [
   {
-    icon: <Award className="h-8 w-8 text-blue-800" />,
+    icon: <Award className="h-8 w-8 text-blue-800 dark:text-gray-400" />,
     title: "5 Star in Java on HackerRank",
     description:
       "Achieved 5-star rating in Java programming on HackerRank platform.",
   },
   {
-    icon: <Code className="h-8 w-8 text-blue-800" />,
+    icon: <Code className="h-8 w-8 text-blue-800 dark:text-gray-400" />,
     title: "200+ Problems Solved",
     description:
       "Solved over 200 problems on LeetCode, HackerRank and other coding platforms.",
   },
   {
-    icon: <Globe className="h-8 w-8 text-blue-800" />,
+    icon: <Globe className="h-8 w-8 text-blue-800 dark:text-gray-400" />,
     title: "10+ Personal Blogging Websites",
     description:
       "Created 10+ personal blogging websites with over 1 million visitors.",
   },
   {
-    icon: <Trophy className="h-8 w-8 text-blue-800" />,
+    icon: <Trophy className="h-8 w-8 text-blue-800 dark:text-gray-400" />,
     title: "PowerPoint Presentation Competition",
     description:
       "Participated in Inter School PowerPoint Presentation Competition and secured 3rd position.",
@@ -30,7 +30,10 @@ const achievementsData = [
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="py-20">
+    <section
+      id="achievements"
+      className="py-20 bg-gray-100/30 dark:bg-neutral-950"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,9 +42,11 @@ export default function Achievements() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-2">Achievements</h2>
-          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-2 dark:text-white">
+            Achievements
+          </h2>
+          <div className="w-20 h-1 bg-blue-800 dark:bg-white mx-auto mb-6"></div>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Recognitions and accomplishments throughout my journey
           </p>
         </motion.div>
@@ -56,14 +61,16 @@ export default function Achievements() {
               viewport={{ once: true }}
               className="h-full"
             >
-              <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-full flex">
+              <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 h-full flex">
                 <div className="p-6 flex items-start h-full">
                   <div className="mr-4 mt-1">{achievement.icon}</div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-2">
+                    <h3 className="text-lg font-bold mb-2 dark:text-white">
                       {achievement.title}
                     </h3>
-                    <p className="text-gray-600">{achievement.description}</p>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {achievement.description}
+                    </p>
                   </div>
                 </div>
               </div>

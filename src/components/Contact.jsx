@@ -54,7 +54,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-100/30">
+    <section id="contact" className="py-20 bg-gray-100/30 dark:bg-neutral-950">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,9 +63,11 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-2">Contact Me</h2>
-          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-2 dark:text-white">
+            Contact Me
+          </h2>
+          <div className="w-20 h-1 bg-blue-800 dark:bg-white mx-auto mb-6"></div>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Get in touch with me for opportunities or collaborations
           </p>
         </motion.div>
@@ -79,18 +81,20 @@ export default function Contact() {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-full flex flex-col">
+            <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 h-full flex flex-col">
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+                <h3 className="text-xl font-bold mb-6 dark:text-white">
+                  Contact Information
+                </h3>
 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <Mail className="h-5 w-5 text-blue-800 mr-3 mt-0.5" />
+                    <Mail className="h-5 w-5 text-blue-800 dark:text-gray-400 mr-3 mt-0.5" />
                     <div>
-                      <p className="font-medium">Email</p>
+                      <p className="font-medium dark:text-gray-200">Email</p>
                       <a
                         href="mailto:shaktitamrakar14@gmail.com"
-                        className="text-gray-600 hover:text-blue-600 transition-colors"
+                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-gray-400 transition-colors"
                       >
                         shaktitamrakar14@gmail.com
                       </a>
@@ -98,12 +102,12 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start">
-                    <Phone className="h-5 w-5 text-blue-600 mr-3 mt-0.5" />
+                    <Phone className="h-5 w-5 text-blue-600 dark:text-gray-400 mr-3 mt-0.5" />
                     <div>
-                      <p className="font-medium">Phone</p>
+                      <p className="font-medium dark:text-gray-200">Phone</p>
                       <a
                         href="tel:+919644605710"
-                        className="text-gray-600 hover:text-blue-600 transition-colors"
+                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-gray-400 transition-colors"
                       >
                         +91-9644605710
                       </a>
@@ -111,10 +115,10 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-blue-800 mr-3 mt-0.5" />
+                    <MapPin className="h-5 w-5 text-blue-800 dark:text-gray-400 mr-3 mt-0.5" />
                     <div>
-                      <p className="font-medium">Location</p>
-                      <p className="text-gray-600">
+                      <p className="font-medium dark:text-gray-200">Location</p>
+                      <p className="text-gray-600 dark:text-gray-300">
                         Khurai, Madhya Pradesh, India
                       </p>
                     </div>
@@ -132,9 +136,11 @@ export default function Contact() {
             viewport={{ once: true }}
             className="h-full"
           >
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-full flex flex-col">
+            <div className="bg-white dark:bg-neutral-900 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 h-full flex flex-col">
               <div className="p-6 flex flex-col h-full">
-                <h3 className="text-xl font-bold mb-6">Send Me a Message</h3>
+                <h3 className="text-xl font-bold mb-6 dark:text-white">
+                  Send Me a Message
+                </h3>
 
                 <form onSubmit={handleSubmit} className="flex flex-col h-full">
                   <div className="space-y-4 flex-grow">
@@ -145,7 +151,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-neutral-700"
                     />
                     <input
                       type="email"
@@ -154,7 +160,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-neutral-700"
                     />
                     <input
                       type="text"
@@ -163,7 +169,7 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                      className="w-full px-4 py-2 border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-neutral-700"
                     />
                     <textarea
                       name="message"
@@ -171,13 +177,13 @@ export default function Contact() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="w-full min-h-[120px] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
+                      className="w-full min-h-[120px] px-4 py-2 border border-gray-300 dark:border-neutral-700 bg-white dark:bg-neutral-950 text-gray-900 dark:text-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-neutral-700"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="mt-4 w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center"
+                    className="mt-4 w-full px-4 py-2 bg-blue-800 text-white dark:text-black rounded-md hover:bg-blue-700 dark:bg-white dark:hover:bg-gray-300 transition-colors flex items-center justify-center"
                     disabled={loading}
                   >
                     <Send className="h-4 w-4 mr-2" />

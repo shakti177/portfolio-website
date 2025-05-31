@@ -69,7 +69,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="py-20 bg-gray-100/30">
+    <section id="projects" className="py-20 bg-gray-100/30 dark:bg-neutral-950">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -78,9 +78,9 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold mb-2">Projects</h2>
-          <div className="w-20 h-1 bg-blue-800 mx-auto mb-6"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold mb-2 dark:text-white">Projects</h2>
+          <div className="w-20 h-1 bg-blue-800 dark:bg-white mx-auto mb-6"></div>
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Showcasing my technical skills through real-world applications
           </p>
         </motion.div>
@@ -94,21 +94,23 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="h-full flex flex-col bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+              <div className="h-full flex flex-col bg-white dark:bg-neutral-900 rounded-lg shadow-sm border border-gray-200 dark:border-neutral-700 overflow-hidden">
                 <div className="aspect-video overflow-hidden">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <h3 className="text-xl font-bold dark:text-white">
+                    {project.title}
+                  </h3>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {project.tags.map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-blue-600/10 text-blue-800 rounded-full text-xs"
+                        className="px-2 py-1 bg-blue-600/10 dark:bg-neutral-950 text-blue-800 dark:text-white rounded-full text-xs"
                       >
                         {tag}
                       </span>
@@ -116,7 +118,9 @@ export default function Projects() {
                   </div>
                 </div>
                 <div className="px-6 pb-6 flex-grow">
-                  <p className="text-gray-600 text-sm">{project.description}</p>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    {project.description}
+                  </p>
                 </div>
                 <div className="px-6 pb-6 flex gap-2">
                   {project.github && (
@@ -124,13 +128,13 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+                      className="inline-flex items-center px-4 py-2 text-sm border text-black dark:text-white border-gray-300 dark:border-neutral-700 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
                     >
                       <Github className="h-4 w-4 mr-2" /> GitHub
                       {project.githubRepo &&
                         stars[project.githubRepo] !== undefined && (
-                          <span className="ml-2 flex items-center text-gray-600">
-                            <Star className="h-3 w-3 mr-1 fill-blue-800 text-blue-800" />
+                          <span className="ml-2 flex items-center text-gray-600 dark:text-gray-300">
+                            <Star className="h-3 w-3 mr-1 fill-blue-800 text-blue-800 dark:fill-white dark:text-white" />
                             {stars[project.githubRepo]}
                           </span>
                         )}
@@ -141,7 +145,7 @@ export default function Projects() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center px-4 py-2 text-sm bg-blue-800 text-white rounded-md hover:bg-blue-700 transition-colors"
+                      className="inline-flex items-center px-4 py-2 text-sm bg-blue-800 text-white dark:text-black rounded-md hover:bg-blue-700 dark:bg-white dark:hover:bg-gray-300 transition-colors"
                     >
                       <ExternalLink className="h-4 w-4 mr-2" /> Live Demo
                     </a>
