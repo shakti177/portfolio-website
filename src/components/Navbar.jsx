@@ -166,13 +166,27 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Navigation Button */}
-        <button
-          className="lg:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div>
+          <button
+            className="lg:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Theme Toggle Button for Mobile */}
+          <button
+            onClick={toggleTheme}
+            className="ml-2 p-2 transition-colors lg:hidden"
+          >
+            {theme === "dark" ? (
+              <Sun className="h-5 w-5 text-white" />
+            ) : (
+              <Moon className="h-5 w-5 text-gray-700" />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation Menu */}
@@ -183,7 +197,7 @@ export default function Navbar() {
             animate="visible"
             exit="hidden"
             variants={mobileMenuVariants}
-            className="lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 overflow-hidden"
+            className="lg:hidden bg-white dark:bg-neutral-900 border-t border-gray-200 dark:border-neutral-700 overflow-hidden"
           >
             <motion.div className="container mx-auto px-4 py-3 flex flex-col space-y-2">
               {navItems.map((item, i) => (
@@ -197,7 +211,7 @@ export default function Navbar() {
                   onClick={() => handleNavClick(item.href)}
                   className={`px-3 py-2 text-sm font-medium text-left transition-colors ${
                     activeSection === item.name.toLowerCase()
-                      ? "text-blue-800 dark:text-blue-400 border-b border-blue-800 dark:border-blue-400"
+                      ? "text-blue-800 dark:text-white border-b border-blue-800 dark:border-white"
                       : "text-gray-600 dark:text-gray-300"
                   }`}
                 >
@@ -207,7 +221,7 @@ export default function Navbar() {
               <motion.button
                 custom={navItems.length}
                 variants={navItemVariants}
-                className="mt-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 transition-colors"
+                className="mt-2 px-4 py-2 text-sm font-medium text-white dark:text-black bg-blue-600 rounded-md hover:bg-blue-700 dark:bg-white dark:hover:bg-gray-300 transition-colors"
               >
                 <a
                   href="https://drive.google.com/file/d/1vKQutDUvRWzmR3FhCUbGg7pvLQK0nxe3/view?usp=sharing"
@@ -216,20 +230,6 @@ export default function Navbar() {
                 >
                   Resume
                 </a>
-              </motion.button>
-              {/* Theme Toggle Button for mobile */}
-              <motion.button
-                custom={navItems.length + 1}
-                variants={navItemVariants}
-                onClick={toggleTheme}
-                className="mt-2 p-2 rounded-full self-start hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                aria-label="Toggle dark mode"
-              >
-                {theme === "dark" ? (
-                  <Sun className="h-5 w-5 text-white" />
-                ) : (
-                  <Moon className="h-5 w-5 text-gray-700" />
-                )}
               </motion.button>
             </motion.div>
           </motion.div>
