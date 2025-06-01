@@ -28,11 +28,11 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="aspect-square rounded-full bg-blue-600/10 dark:bg-blue-900/20 flex items-center justify-center overflow-hidden">
+            <div className="flex items-center justify-center overflow-hidden">
               <img
                 src={photo}
                 alt="Shakti Tamrakar"
-                className="w-full h-full object-cover object-bottom"
+                className="size-96 object-cover object-bottom rounded-full"
               />
             </div>
           </motion.div>
