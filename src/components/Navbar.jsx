@@ -166,9 +166,9 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile Navigation Button */}
-        <div>
+        <div className="lg:hidden">
           <button
-            className="lg:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none"
+            className=" p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
