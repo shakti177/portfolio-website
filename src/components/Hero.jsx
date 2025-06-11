@@ -149,7 +149,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-20 md:left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-20 md:left-1/2 transform -translate-x-1/2 animate-bounce border-1 rounded-full p-2 bg-white dark:bg-neutral-900 shadow-lg">
         <ArrowRight
           className="h-6 w-6 rotate-90 text-gray-600 dark:text-gray-300 hover:cursor-pointer"
           onClick={() => {
