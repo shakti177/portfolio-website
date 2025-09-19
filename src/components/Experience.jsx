@@ -3,16 +3,6 @@ import { Briefcase, Calendar, CheckCircle } from "lucide-react";
 
 const experienceData = [
   {
-    position: "WordPress Development Intern",
-    company: "FeedBox",
-    location: "Indore, Madhya Pradesh, India",
-    period: "Dec 2022 - May 2023",
-    responsibilities: [
-      "Developed Client Websites with the help of WordPress CMS.",
-      "Worked on various WordPress themes and Plugins",
-    ],
-  },
-  {
     position: "Field and Operations Manager",
     company: "Zomato Ltd",
     location: "Vadodara, Gujarat, India",
@@ -24,6 +14,16 @@ const experienceData = [
       "Ensuring compliance with company policies and procedures, as well as local regulations.",
       "Providing training and support to delivery executives to enhance their skills and knowledge.",
       "Collaborating with other departments, such as customer support and marketing, to ensure a seamless customer experience.",
+    ],
+  },
+  {
+    position: "WordPress Development Intern",
+    company: "FeedBox",
+    location: "Indore, Madhya Pradesh, India",
+    period: "Dec 2022 - May 2023",
+    responsibilities: [
+      "Developed Client Websites with the help of WordPress CMS.",
+      "Worked on various WordPress themes and Plugins",
     ],
   },
 ];
