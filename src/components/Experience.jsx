@@ -12,6 +12,20 @@ const experienceData = [
       "Worked on various WordPress themes and Plugins",
     ],
   },
+  {
+    position: "Field and Operations Manager",
+    company: "Zomato Ltd",
+    location: "Vadodara, Gujarat, India",
+    period: "Sept 2025 - Present",
+    responsibilities: [
+      "Managing a team of delivery executives to ensure timely and efficient delivery of orders.",
+      "Coordinating with restaurant partners to ensure smooth operations and resolve any issues that may arise.",
+      "Analyzing delivery data to identify areas for improvement and implementing strategies to enhance delivery performance.",
+      "Ensuring compliance with company policies and procedures, as well as local regulations.",
+      "Providing training and support to delivery executives to enhance their skills and knowledge.",
+      "Collaborating with other departments, such as customer support and marketing, to ensure a seamless customer experience.",
+    ],
+  },
 ];
 
 export default function Experience() {
